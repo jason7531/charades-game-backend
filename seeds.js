@@ -13,75 +13,75 @@ const data = [
   },
   {
     description: "Female/Woman Wife Feminine",
-    imageurl: "https://i.ibb.co/Fw7csLx/card3.jpg",
+    imageurl: "https://i.ibb.co/1q7Qvdz/card3.jpg",
   },
   {
     description: "Male/Man Husband Masculine",
-    imageurl: "https://i.ibb.co/Fw7csLx/card4.jpg",
+    imageurl: "https://i.ibb.co/ZLCxcxD/card4.jpg",
   },
   {
     description: "Work Profession Craft",
-    imageurl: "https://i.ibb.co/Fw7csLx/card5.jpg",
+    imageurl: "https://i.ibb.co/WtV3Kzg/card5.jpg",
   },
   {
     description: "Recreation Sport Activity",
-    imageurl: "https://i.ibb.co/Fw7csLx/card6.jpg",
+    imageurl: "https://i.ibb.co/xCw1JWS/card6.jpg",
   },
   {
     description: "Wildlife Animal",
-    imageurl: "https://i.ibb.co/Fw7csLx/card7.jpg",
+    imageurl: "https://i.ibb.co/Ph6fChd/card7.jpg",
   },
   {
     description: "Flora Nature Plant",
-    imageurl: "https://i.ibb.co/Fw7csLx/card8.jpg",
+    imageurl: "https://i.ibb.co/gmXTgTn/card8.jpg",
   },
   {
     description: "Literature Writing Book",
-    imageurl: "https://i.ibb.co/Fw7csLx/card9.jpg",
+    imageurl: "https://i.ibb.co/Xj0c08k/card9.jpg",
   },
   {
     description: "Music Song Note",
-    imageurl: "https://i.ibb.co/Fw7csLx/card10.jpg",
+    imageurl: "https://i.ibb.co/10yvTHp/card10.jpg",
   },
   {
     description: "Theatre Film Camera",
-    imageurl: "https://i.ibb.co/Fw7csLx/card11.jpg",
+    imageurl: "https://i.ibb.co/D7C8dpM/card11.jpg",
   },
   {
     description: "Arts Sculpture/Painting Drawing/Comics",
-    imageurl: "https://i.ibb.co/Fw7csLx/card12.jpg",
+    imageurl: "https://i.ibb.co/9GtRtYf/card12.jpg",
   },
   {
     description: "Telivision Broadcast Series",
-    imageurl: "https://i.ibb.co/Fw7csLx/card13.jpg",
+    imageurl: "https://i.ibb.co/3Rth0QM/card13.jpg",
   },
   {
     description: "Title Brand Name",
-    imageurl: "https://i.ibb.co/Fw7csLx/card14.jpg",
+    imageurl: "https://i.ibb.co/sgXHJ7M/card14.jpg",
   },
   {
     description: "Idea Thought Concept",
-    imageurl: "https://i.ibb.co/Fw7csLx/card15.jpg",
+    imageurl: "https://i.ibb.co/VLvRTNX/card15.jpg",
   },
   {
     description: "Expression/Quote Speak Word",
-    imageurl: "https://i.ibb.co/Fw7csLx/card16.jpg",
+    imageurl: "https://i.ibb.co/k9nGQ5T/card16.jpg",
   },
   {
     description: "Location Country Flag",
-    imageurl: "https://i.ibb.co/Fw7csLx/card17.jpg",
+    imageurl: "https://i.ibb.co/MgY97vQ/card17.jpg",
   },
   {
     description: "Holidays Birthday Celebration",
-    imageurl: "https://i.ibb.co/Fw7csLx/card18.jpg",
+    imageurl: "https://i.ibb.co/CW0D4zT/card18.jpg",
   },
   {
     description: "Building Construction City",
-    imageurl: "https://i.ibb.co/Fw7csLx/card19.jpg",
+    imageurl: "https://i.ibb.co/XXZQRkQ/card19.jpg",
   },
   {
     description: "Date Event Daytime",
-    imageurl: "https://i.ibb.co/Fw7csLx/card20.jpg",
+    imageurl: "https://i.ibb.co/Y7MGTX9/card20.jpg",
   },
 ];
 
@@ -158,15 +158,15 @@ const seedDB = () => {
       }
     });
   });
-  words.forEach((seed) => {
-    Word.create(seed, (err, word) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log(word);
-      }
-    });
-  });
+  // words.forEach((seed) => {
+  //   Word.create(seed, (err, word) => {
+  //     if (err) {
+  //       console.log(err);
+  //     } else {
+  //       console.log(word);
+  //     }
+  //   });
+  // });
 };
 
 module.exports = seedDB;

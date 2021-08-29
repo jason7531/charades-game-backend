@@ -2,10 +2,19 @@ const http = require("http");
 const express = require("express");
 const mongoose = require("mongoose");
 const seedDB = require("./seeds");
-
+const cors = require("cors");
 const socketio = require("socket.io");
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
+const {
+  addUser,
+  removeUser,
+  getUser,
+  getUserByName,
+  getUsersInRoom,
+} = require("./users");
+
+const { addCard, getCards } = require("./cards");
+const { addWord, getWord } = require("./words");
 
 const router = require("./router");
 
@@ -16,8 +25,21 @@ const io = socketio(server, {
     origin: "*",
   },
 });
-
+app.use(cors());
+app.options("*", cors());
 app.use(router);
+// app.use(function (req, res, next) {
+//   // Website you wish to allow to connect
+//   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+
+//   // Request methods you wish to allow
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+//   );
+
+//   next();
+// });
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 mongoose
@@ -60,6 +82,18 @@ io.on("connection", (socket) => {
 
     callback();
   });
+
+  socket.on("sendCards", (cards) => {
+    addCard(cards);
+  });
+
+  socket.emit("getCards", getCards());
+
+  socket.on("sendWord", (word) => {
+    addWord(word);
+  });
+
+  socket.emit("getWord", getWord());
 
   socket.on("sendMessage", (message, callback) => {
     const user = getUser(socket.id);

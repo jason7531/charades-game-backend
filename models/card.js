@@ -5,7 +5,7 @@ const cardSchema = mongoose.Schema(
       type: String,
       max: 100,
     },
-    imageUrl: {
+    imageurl: {
       type: String,
     },
   },
